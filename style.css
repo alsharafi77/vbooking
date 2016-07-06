@@ -1,0 +1,498 @@
+/* Vacation Booking Demo - � 2001,2015 IBM Corporation. ALL RIGHTS RESERVED */
+
+BODY, P, H1, H2, H3, H4, H5, H6, LI, TD, TH, DD, DT, td, tr {
+	font-family: "Open Sans", Tahoma;
+/* 	font-family:  Tahoma; */
+	color: white;
+   	font-size:9.0pt; 
+	padding:0px;
+	margin:0px;
+	font-weight:normal;
+}
+
+BODY {
+		/* Image supplied by Pixabay */
+	background: url("graphics/new/gh_demo_clouds.jpg") repeat center center fixed;
+	background-size:cover;
+	height: 100%;
+/* 	position: relative; */
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+   BODY{
+   	position: relative;
+   }
+}
+
+div.loaded {
+ 		/* Image supplied by Pixabay */
+ 	background: url("graphics/new/gh_demo_clouds.jpg") no-repeat center center fixed;
+	background-size: cover;
+	opacity: 1;
+	position: fixed;
+    z-index:10;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+
+H1 {font-size:1.6EM; margin:0px; color:#fffff; font-weight: normal;}
+H2 {font-size:1.6EM; margin:0px; color:#1e93ff; font-weight: normal;}
+H3 {font-size:1.2EM; margin:0px;color: #003a8c; font-weight: normal;}
+H4 {font-size:1.2EM; margin:0px; color:#fffff; font-weight: Semibold;}
+H5 {font-size:2.2EM; margin:0px; color:#323232; font-weight: normal;}
+H6 {font-size:3.0EM; margin:0px; color:#ea5600; font-weight: bold;}
+
+
+A:link {text-decoration: none; color: white;}
+A:visited {text-decoration: none; color: white;}
+A:active {text-decoration: none; color: white;}
+A:hover {text-decoration: underline; color: white;}
+
+form { display:inline; }
+
+TABLE { border-collapse: collapse; }
+
+TABLE.block {
+/*  background-color: #1e93ff; */
+    width: 1030px;
+    height: 400px;
+    margin: 0 auto;
+    border: none !important;
+    margin-top: 50px;
+    background:rgba(30, 147, 255, 0.8);
+}
+
+TABLE.block_searched {
+/*  background-color: #1e93ff; */
+/*  width: 1030px; */
+/*  height: 400px; */
+    margin: 0 auto;
+    border: none !important;
+/*  margin-top: 50px; */
+    background:rgba(30, 147, 255, 0.8);
+    height: 430px; 
+    width: 340px;
+}
+
+TABLE.book_block {
+/*  background-color: #1e93ff; */
+   	width: 1030px;
+   	height: 400px;
+    margin: 0 auto;
+    border: none !important;
+    margin-top: 50px;
+}
+
+TABLE.container {
+	margin: 0 auto;
+    border: none !important;
+    margin-top: 50px;
+}
+ 
+TABLE.images {
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+TD, TH {
+	padding:2px;
+	border-top-style:solid;
+	border: none !important;
+}
+
+TH { background:#EEEEEE; }
+
+.toptitle {
+	background:#000077;
+	background: url("graphics/stripe-bg.png");
+	color:WHITE;
+	padding:10px;
+}
+
+DIV.new_header {
+	margin-top: -25px;
+	margin-left: -17px;
+}
+
+DIV.content { padding:15px; }
+
+DIV.message {
+	border-style:solid;
+	border-width:2px;
+	border-color:#CCCCCC;
+	background-color:#F1F1F1;
+	margin:10px;
+	padding:10px;
+}
+
+DIV.flightsearchbox, DIV.hotelsearchbox, DIV.specialoffersbox {
+	margin:10px 10px 10px 5px;
+	padding:10px;
+}
+
+DIV.flightBook_box {
+	margin-right:25px;
+	margin-left:0px;
+	padding:10px;
+	width:285px;
+	height:150px;
+	float:left; 
+	background-color:white; 
+	margin-top:-165px;
+}
+
+DIV.hotelBook_box {
+	margin-right:25px;
+	margin-left:0px;
+	padding:10px;
+/* 	background-color:#ea5600;  */
+	background-color:white;
+	float: right; 
+	width: 350px; 
+	height: 180px
+	margin-top:-165px;
+}
+
+DIV.transparent {
+	 background:rgba(255,255,255,0.5);
+	 width: 330px;
+	 height: 80px;
+	 float:center; 
+	 position:absolute;
+}
+
+DIV.banner_book_flight {
+	padding: -5px;
+	width:150px;
+	height:28px;
+	float:left; 
+	margin-left: -3px; 
+	background-color:#003a8c
+}
+
+DIV.banner_manage_flight {
+	padding: -5px;
+	width:150px;
+	height:28px;
+	float:left; 
+	margin-left: -10px; 
+	margin-top: -25px;
+	background-color:#003a8c
+}
+
+DIV.banner_specials {
+	padding: -5px;
+	width:160px;
+	height:28px;
+	float:left; 
+	margin-left: -1px; 
+	margin-top: -28px; 
+	background-color:#ea5600; 
+	position: absolute; 
+}
+DIV.banner_deals {
+	padding: -5px;
+	width:200px;
+	height:28px;
+	float:left; 
+	margin-left: -1px; 
+	margin-top: -28px; 
+	background-color:#ea5600; 
+	position: absolute; 
+}
+
+DIV.customers {
+	width:200px;
+	border-style:solid;
+	border-width:2px;
+	border-color:#CCDDCC;
+	background-color:#F1FFF1;
+	margin:60px 10px 10px 10px;
+	padding:10px;
+}
+
+input.DateText {
+	width: 96px;
+	height: 28px;
+	background: none;
+	border: 1px solid white;
+	font-size: 1.2em;
+	color: #003a8c;
+	font-weight: 1px;
+}
+
+input.PassengerText {
+	width: 300px;
+	height: 28px;
+	background: none;
+	border: 1px solid white;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 5px;	
+	font-size: 1.2em;
+	color: #003a8c;
+	font-weight: 1px;
+}
+
+.smallprint {
+	color:LIGHT-GREY;
+	font-size:0.7em;
+}
+.bookFlightTable TR:first-child TD {
+    font-weight: bold;
+    background-color: #EEEEEE
+}
+
+.bookFlightTable TD { padding-right: 2em; }
+
+TABLE.noborder TD {
+    border-width:0px;
+    border-color:WHITE;
+}
+
+.noTopBorder TR:first-child TD {
+    border-top-width:0px;   
+    border-color:WHITE;
+}
+
+A.nounderline:link {text-decoration: none;color:inherit;}
+A.nounderline:visited {text-decoration: none;color:inherit;}
+A.nounderline:active {text-decoration: none;color:inherit;}
+A.nounderline:hover {text-decoration: none;color:inherit;}
+
+.pictureFrame {	
+	float:right;	
+	border: 3px solid lightgrey;
+	border-radius : 15px;
+	-moz-border-radius : 15px;
+	box-shadow: inset 0 0 .5em 5px lightgrey;
+	-moz-box-shadow: inset 0 0 .5em 5px lightgrey;	
+	padding :1em;
+}
+
+.pictureFrame .caption { margin-top: .5em; }
+
+.pictureFrame img {
+	border-radius :10px;
+	-moz-border-radius :10px;
+}
+
+.findHotelsName {
+    font-family: cursive;
+    color:blue;
+}
+  
+.btn { 
+  color: white;
+  font-size: 1.2EM;
+  background: #a0a0a0;
+  height: 28px;
+  width: 116px;
+  text-decoration: none;
+  border: 0px;
+}
+
+.btn-flight {
+  color: white;
+  font-size: 1.2EM;
+  background: #1e93ff;
+  height: 28px;
+  width: 135px;
+  text-decoration: none;
+  border: 0px;
+}
+.btn:hover { cursor: hand; }
+
+.btn-flight:hover { cursor: hand; }
+
+.trans_btn {
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size:2.4EM; 
+    margin:0px; 
+    color:#323232; 
+    font-weight: normal;
+    position:absolute; 
+    padding-top: 10px; 
+    padding-bottom: 160px; 
+    padding-left: 30px; 
+    padding-right: 180px;
+}
+
+.languagebar {
+	color: #a5d4ff;
+	font-weight: normal;
+}
+
+.languagebar a { color: inherit; }
+
+.topselect {
+	font-size: inherit;
+	color: inherit;
+	font-weight: normal;
+	height: 28px;
+	border: none;
+    border-color: transparent;
+	background: url(graphics/new/gh_demo_droparrow.png) no-repeat right transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    padding: 5px 5px 5px 5px;
+}
+
+
+
+#currencySelector { width: 60px;}
+
+.hotelsearchbox input[type="radio"] { opacity: 0; }
+
+.hotelsearchbox input[type="radio"] + label {
+	margin: 0;
+	height: 30px;
+	width: 30px;
+	clear: none;
+	padding: 5px 0 4px 20px;
+	cursor: pointer;
+	background: url(graphics/new/unchecked.png) left center no-repeat;
+	color: #ffffff;
+}
+
+.hotelsearchbox input[type="radio"]:checked + label {
+	background-image: url(graphics/new/checked.png)
+}
+
+.book_flight_input input[type="radio"] {
+	opacity: 0;
+}
+
+.book_flight_input input[type="radio"] + label {
+	margin: 0;
+	height: 30px;
+	width: 30px;
+	clear: none;
+	padding: 5px 0 4px 20px;
+	cursor: pointer;
+	background: url(graphics/new/unchecked.png) left center no-repeat;
+	color: #ffffff;
+}
+
+.book_flight_input input[type="radio"]:checked + label {
+	background-image: url(graphics/new/checked.png)
+}
+
+select.create_set {
+	background-color: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	border-color: #ffffff;
+	border: 1px solid #ffffff;
+	font-size: 1.2em;
+	width: 305px;
+	height: 28px;
+	font-weight:normal;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #003a8c;
+	background: url(graphics/new/gh_demo_droparrow.png) no-repeat right 5px center transparent;
+}
+
+select.booked_set {
+	background-color: #003a8c;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	border-color: #ffffff;
+	border: 1px solid #ffffff;
+	font-size: 1.2em;
+	height: 28px;
+	font-weight:normal;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #ffffff;
+	background: url(graphics/new/gh_demo_droparrow.png) no-repeat right 5px center transparent;
+}
+
+.booked_set option { font-weight: normal; }
+
+select.flightSel, .default, .set {
+	background: url(graphics/new/gh_demo_droparrow.png) no-repeat right 5px center transparent;
+	background-color: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	border-color: #ffffff;
+	border: 1px solid #ffffff;
+	font-size: 1.2em;
+	width: 305px;
+	height: 28px;
+	font-weight:normal;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+select.flightSel, .default {
+	color: #003a8c;
+	font-weight:normal;
+}
+
+.set {
+	color: #ffffff;
+	font-weight:normal;
+}
+
+.set option, .default option {
+	background-color: #ffffff;
+	color: #1e93ff;
+}
+
+.footer, .push {
+/* 	color: #1e93ff; */
+/* 	text-align: center; */
+/* 	background: #003a8c; */
+/* 	width: 100%; */
+/* 	position:absolute; */
+/* 	height: 50px; */
+/* 	bottom: 0px; */
+/* 	left: 0px; */
+/* 	display: block; */
+/* 	clear: both; */
+/* 	overflow: hidden; */
+	height: 100px;
+}
+
+.footer {
+	color: #1e93ff;
+	text-align: center;
+	background: #003a8c;
+	width: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #003a8c;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #003a8c;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #003a8c;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #003a8c;
+}

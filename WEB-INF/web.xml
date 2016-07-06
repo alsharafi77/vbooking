@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+
+	<!-- This should be the username for the machine running MQ -->
+	<context-param>
+		<param-name>jmsUserName</param-name>
+		<param-value>theuser</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>jmsPassword</param-name>
+		<param-value>thepassword</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>FFVersion</param-name>
+		<!-- This should be YES to invoke FF version. FFVALUE is replaced during 
+			install -->
+		<param-value>FFVALUE</param-value>
+	</context-param>
+	<!-- ************************************************************* 
+	
+	MAKE SURE MQ SETTINGS ARE ALSO CORRECT IN THE META-INF/context.xml FILE
+	
+	 ************************************************************* -->
+
+	<!-- This should point to stand alone app -->
+	<context-param>
+		<param-name>currencyWSURL</param-name>
+		<param-value>http://localhost:8086/currencyconverter</param-value>
+	</context-param>
+	<!-- This should point to stand alone app -->
+	<context-param>
+		<param-name>currencyWSwsdlURL</param-name>
+		<param-value>http://localhost:8086/currencyconverter/wsdl</param-value>
+	</context-param>
+	
+	<!-- This should point to stand alone app -->
+	<context-param>
+		<param-name>frequentflyerWSURL</param-name>
+		<param-value>http://localhost:8087/frequentflyer</param-value>
+	</context-param>
+	
+	<!-- This should point to stand alone app -->
+	<context-param>
+		<param-name>availableseatsWSURL</param-name>
+		<param-value>http://localhost:8085/availableseats</param-value>
+	</context-param>
+
+	<!-- This should point to tomcat -->
+	<context-param>
+		<param-name>hotelsWSURL</param-name>
+		<param-value>http://localhost:8089/hotelsWS/services/HotelFinder</param-value>
+	</context-param>
+
+	<!-- This should point to tomcat -->
+	<context-param>
+		<param-name>hotelsWSwsdlURL</param-name>
+		<param-value>http://localhost:8089/hotelsWS/wsdl</param-value>
+		<description />
+	</context-param>
+
+	<!-- This should point to WAS -->
+	<context-param>
+		<param-name>getBookingWSURL</param-name>
+		<param-value>http://localhost:9080/com.vbooking.mybooking/services/GetBookingByReservationNumberPort</param-value>
+	</context-param>
+
+	<!-- This should point to WAS -->
+	<context-param>
+		<param-name>cancelBookingWSURL</param-name>
+		<param-value>http://localhost:9080/com.vbooking.mybooking/services/CancellationPort</param-value>
+	</context-param>
+
+	<!-- This should point to WAS -->
+	<context-param>
+		<param-name>updateBookingWSURL</param-name>
+		<param-value>http://localhost:9080/com.vbooking.mybooking/services/UpdatePort</param-value>
+	</context-param>
+
+	<!-- This should point to WAS -->
+	<context-param>
+		<param-name>logonWSURL</param-name>
+		<param-value>http://localhost:9080/com.vbooking.mybooking/services/LogonServiceImpl</param-value>
+	</context-param>
+
+	<!-- This should point to WAS -->
+	<context-param>
+		<param-name>flightWSURL</param-name>
+		<param-value>http://localhost:9080/com.vbooking.flights.rest/rest/flights/</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>TestVBookingServlet</servlet-name>
+		<display-name>TestVBookingServlet</display-name>
+		<description>Servlet to test that vbooking app has been setup
+			correctly</description>
+		<servlet-class>com.vbooking.test.servlet.TestVBookingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestVBookingServlet</servlet-name>
+		<url-pattern>/TestVBookingServlet</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

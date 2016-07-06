@@ -1,0 +1,41 @@
+<Context>
+  <Resource
+      name="jms/MyQCF"
+      auth="Container"
+      type="com.ibm.mq.jms.MQQueueConnectionFactory"
+      factory="com.ibm.mq.jms.MQQueueConnectionFactoryFactory"
+      description="JMS Queue Connection Factory for sending messages"
+      HOST="localhost"
+      PORT="1414"
+      CHAN="vbookingwebapp"
+      TRAN="1"
+      QMGR="QM_vbooking"/>
+   <Resource
+      name="vbooking.request.passenger.booking"
+      auth="Container"
+      type="com.ibm.mq.jms.MQQueue"
+      factory="com.ibm.mq.jms.MQQueueFactory"
+      description="JMS Queue for sending booking requests"
+      QU="vbooking.booking"/>
+   <Resource
+      name="vbooking.request.passenger.booking.reply"
+      auth="Container"
+      type="com.ibm.mq.jms.MQQueue"
+      factory="com.ibm.mq.jms.MQQueueFactory"
+      description="JMS Queue for receiving booking confirmations"
+      QU="vbooking.booking.reply"/>
+   <Resource
+      name="vbooking.request.passenger.booking.ff.reply"
+      auth="Container"
+      type="com.ibm.mq.jms.MQQueue"
+      factory="com.ibm.mq.jms.MQQueueFactory"
+      description="JMS Queue for receiving frequent flyer booking confirmations"
+      QU="vbooking.booking.ff.reply"/>
+   <Resource
+      name="vbooking.test"
+      auth="Container"
+      type="com.ibm.mq.jms.MQQueue"
+      factory="com.ibm.mq.jms.MQQueueFactory"
+      description="JMS Queue for receiving test/validation requests"
+      QU="vbooking.test"/>
+</Context>

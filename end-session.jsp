@@ -1,0 +1,5 @@
+
+ <% 
+ session.invalidate();
+%>
+Session ended
