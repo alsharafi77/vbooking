@@ -1,0 +1,23 @@
+<project default="main" basedir="..">
+
+    <target name="clean">
+        <delete fileset="vbooking-home.war"/>
+    </target>
+
+    <target name="build" depends="clean">
+        <war destfile = "vbooking-home.war" webxml = "${basedir}/WEB-INF/web.xml">
+
+        <fileset dir = ".${basedir}">
+            <include name = "**/*.*"/>
+        </fileset>
+
+        
+        <classes dir = "${basedir}/WEB-INF/classes"/>
+        
+        </war>
+    </target>
+
+    <target name="main" depends="build"/>
+
+</project>
+
