@@ -1,7 +1,7 @@
 <project default="main" basedir="..">
 
     <target name="clean">
-        <delete fileset="vbooking-home.war"/>
+        <delete file="vbooking-home.war"/>
     </target>
 
     <target name="build" depends="clean">
