@@ -7,7 +7,7 @@
     <target name="build" depends="clean">
         <war destfile = "vbooking-home.war" webxml = "${basedir}/WEB-INF/web.xml">
 
-        <fileset dir = ".${basedir}">
+        <fileset dir = "${basedir}">
             <include name = "**/*.*"/>
         </fileset>
 
