@@ -25,7 +25,7 @@
         </war>
     </target>
 
-    <target name="publishToUCD" depends "build">
+    <target name="publishToUCD" depends="build">
         <exec executable="/bin/bash" 
             outputproperty="mycomponent.component.output">
 
@@ -51,9 +51,9 @@
             <arg value="-base"/> <arg value="${basedir}/target"/>
             
         </exec>
-    <target/>
+    </target>
 
-    <target name="main" depends="build"/>
+    <target name="main" depends="publishToUCD"/>
 
 </project>
 
