@@ -1,4 +1,4 @@
-<%-- Vacation Booking demo - © 2001,2015 IBM Corporation. --%>
+<%-- Vacation Booking demo - ï¿½ 2001,2015 IBM Corporation. --%>
 <%@page errorPage="error.jsp"%>
 <%
 	String _pageTitle = "Vacation Booking online flight booking";
@@ -33,7 +33,7 @@
 <!-- INITIAL GREETINGS AND TRIP BOX -->
 		<TD>
 			<br><br><br>
-			<h1 style="text-indent: 20px; margin-top: -60px;">Welcome to Vacation Booking, the best way to plan your holiday.</h1>
+			<h1 style="text-indent: 20px; margin-top: -60px;">Welcome to Vacation Booking, the best way to plan your holiday x.</h1>
 			<h3 style="text-indent: 20px;">Find a flight or hotel using our search options or take advantage of our latest special offers.</h3> 
 			<br>
 			<DIV CLASS="banner_book_flight">
