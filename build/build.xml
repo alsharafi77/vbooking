@@ -58,7 +58,7 @@
 
     <target name="provisionApplication" depends="publishToUCD">
         <exec executable="curl">
-            <arg line="-ku admin:passw0rd -X POST -d '{&quot;parm&quot;:{&quot;OperationParameter&quot;:&quot;&lt;variable type=\&quot;inputJA\&quot;&gt;&lt;envName type=\&quot;String\&quot;&gt;&lt;![CDATA[${environment.name}]]&gt;&lt;\/envName><\/variable>&quot;}}' -H &quot;Content-Type:application/json&quot; https://ico-25.csid.tec.hur.cdn/orchestrator/v2/offerings/129145/launch"/>
+            <arg line="-ku admin:passw0rd -X POST -d '{&quot;parm&quot;:{&quot;OperationParameter&quot;:&quot;&lt;variable type=\&quot;inputJA\&quot;&gt;&lt;envName type=\&quot;String\&quot;&gt;&lt;![CDATA[${environment.name}]]&gt;&lt;\/envName&gt;&lt;\/variable>&quot;}}' -H &quot;Content-Type:application/json&quot; https://ico-25.csid.tec.hur.cdn/orchestrator/v2/offerings/129145/launch"/>
         </exec>
     </target>
 
