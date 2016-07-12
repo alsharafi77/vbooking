@@ -5,6 +5,8 @@
     <property name="udclient.username" value="admin"/>
     <property name="udclient.password" value="admin"/>
     <property name="udclient.version" value="CI_${env.BUILD_NUMBER}"/>
+    <property name="environment.name" value="DEV_${env.BUILD_NUMBER}">
+
 
     <target name="clean">
         <mkdir dir="${basedir}/target"/>
@@ -54,7 +56,13 @@
         </exec>
     </target>
 
-    <target name="main" depends="publishToUCD"/>
+    <target name="provisionApplication" depends="publishToUCD">
+        <exec executable="curl">
+            <arg line="-ku admin:passw0rd -X POST -d '{&quotparm&quot:{&quotOperationParameter&quot:&quot<variable type=\&quotinputJA\&quot><envName type=\&quotString\&quot><![CDATA[SteveDeploy]]><\/envName><\/variable>&quot}}' -H &quotContent-Type:application/json&quot https://ico-25.csid.tec.hur.cdn/orchestrator/v2/offerings/129145/launch"/>
+        </exec>
+    </target>
+
+    <target name="main" depends="provisionApplication"/>
 
 </project>
 
