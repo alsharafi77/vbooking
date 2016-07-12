@@ -5,7 +5,7 @@
     <property name="udclient.username" value="admin"/>
     <property name="udclient.password" value="admin"/>
     <property name="udclient.version" value="CI_${env.BUILD_NUMBER}"/>
-    <property name="environment.name" value="DEV_${env.BUILD_NUMBER}">
+    <property name="environment.name" value="DEV_${env.BUILD_NUMBER}"/>
 
 
     <target name="clean">
