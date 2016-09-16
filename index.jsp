@@ -1,7 +1,7 @@
 <%-- Vacation Booking demo - � 2001,2015 IBM Corporation. --%>
 <%@page errorPage="error.jsp"%>
 <%
-	String _pageTitle = "Ade Vaction Booking online flight booking";
+	String _pageTitle = "Steve Vaction Booking online flight booking";
 	String city = "";
 	String from = "";
 	String to = "";
