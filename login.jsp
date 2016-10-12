@@ -1,8 +1,8 @@
-<%-- Vacation Booking demo - © 2001,2015 IBM Corporation. --%>
+<%-- Vacation Booking demo - ï¿½ 2001,2015 IBM Corporation. --%>
 <%@page import="com.vbooking.logon.*"%>
 <%@page errorPage="error.jsp" %>
 <%
-String _pageTitle = "Vacation Booking online flight booking"; 
+String _pageTitle = "Vacation Booking online flight booking2"; 
 %>
 <%@ include file="inc-page-init.jsp" %>
 
